@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #div
+      {
+      transition-delay: 2s;
+      -moz-transition-delay: 2s; /* Firefox 4 */
+      -webkit-transition-delay: 2s; /* Safari 和 Chrome */
+      -o-transition-delay: 2s; /* Opera */
+      }
+  </style>
+</head>
+<body>
+  <input id="checkbox" type="checkbox" value="1" true-value="0" false-value="1">
+  <div id="test">
+   我
+  </div>
+   <!-- 链接后面加了一个换行符 -->
+   <a href="http://www.baidu.com
+   ">aaaa</a>
+   <!-- 链接后面加了一个制表符 -->
+   <a href="http://www.baidu.com ">bbbb</a>
+   <svg xmlns:feature="http://www.openplans.org/topp"></svg>
+   <!-- 被渲染为： -->
+   <svg xmlns:NS1="" NS1:xmlns:feature="http://www.openplans.org/topp"></svg>
+   <div v-for="item in list">
+    <input type="text" v-model="item.value">
+   </div>
+
+   <div id="div">
+    <div>wo </div> 
+    <div>wo</div> 
+   </div>
+   <div id="textarea">
+    <textarea placeholder="place input..."></textarea>
+  </div>
+  <div>我是{{name}}</div>
+  <!-- <div v-bind="{ type: 'text' }"></div>
+  <input v-model="data[type]" :type="type">
+  扩展为
+  <input v-if="type === 'checkbox'" type="checkbox" v-model="data[type]">
+  <input v-else-if="type === 'radio'" type="radio" v-model="data[type]">
+  <input v-else :type="type" v-model="data[type]"> -->
+  <script>
+    console.log(checkbox.getBoundingClientRect())
+    let d = document.createElement('div')
+    d.innerHTML = '我是div'
+    let body = document.body
+    body.insertBefore(d, null)
+    console.log(1)
+
+    // alert(1)
+    //      2 2*2-1 2*2*2 - 3 32 - 1
+    // 1,1,2,4,7,13,24,44,...求数列的第 n项
+    //  0 1 2 3 6 11  20
+    function f(n) {
+      if(n < 1) return 0
+      if(n == 1) return 1
+      return f(n-1) + f(n - 2) + f(n - 3)
+    }
+
+    function f(n = 0) {
+      let list = [1,1,2]
+      if(n < 1) return 0
+      if(n < 4) return list[n - 1]
+      for(let i = 4; i <= n; i++) {
+        list.push(list[0]+list[1]+list[2])
+        list.shift()
+      }
+      return list[2]
+    }
+function toObject(arr) {
+  const res = {}
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i]) {
+      extend(res, arr[i])
+    }
+  }
+  return res
+}
+function extend(to, _from) {
+  for (const key in _from) {
+    to[key] = _from[key]
+  }
+  return to
+}
+
+function a(fn) {
+  let str = '123'
+  fn(str)
+  console.log(str)
+}
+a(function() {
+  return new Function('with(this.a) {str = "456"; console.log(this.a)}')()
+})
+  </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico" />
+    <title><%= htmlWebpackPlugin.options.title %></title>
+  </head>
+  <body>
+    <noscript>
+      <strong
+        >We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work
+        properly without JavaScript enabled. Please enable it to
+        continue.</strong
+      >
+    </noscript>
+    <template id="temp">
+      <div>
+        <span>hello</span>
+      </div>
+    </template>
+
+    <div>{{ data | filter('a') }}</div>
+    <div :data="data | filter"></div>
+    <div :data="'data | filter' + 1"></div>
+    <div :key="data | filter1 | filter2"></div>
+    <!-- <div id="app">{{ message }} {{ isNaN }} {{ _data }}{{ _a }}</div> -->
+    <div id="app"></div>
+    <div v-if="a"></div>中间文本
+    <p v-else-if="b"></p>
+    <span v-else></span>
+    <div id="s">
+      为洒点水\u2028
+    </div>
+    <!-- built files will be auto injected --> 
+  </body>
+  <script>
+
+  </script>
+</html>

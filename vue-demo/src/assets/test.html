@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.js"></script>
+    <style>
+      #s {
+        background: red;
+      }
+      a {
+        display: block;
+        text-align: center;
+      }
+      .waterFall {
+        width: 200px;
+        float: left;
+        clear: both;
+      }
+      .waterFall > div {
+        break-inside: avoid;
+        -webkit-break-inside: avoid;
+        float: left;
+        width: 100px;
+        clear: right;
+      }
+      .waterFall > div > img {
+        width: 100px;
+      }
+			.ellipsis {
+				overflow: hidden;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+			}
+				
+    </style>
+  </head>
+  <body>
+    <div id="s">1</div>
+    <div id="s">2</div>
+    <button style="background: #FFF;">按钮</button>
+    <div id="app">
+      <input type="text" v-model="myText" />
+      <input type="file" value="" @change="change" />
+    </div>
+    <div class="waterFall">
+      <div>
+        <img
+          src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fblog%2F202105%2F04%2F20210504062111_d8dc3.thumb.1000_0.jpg&refer=http%3A%2F%2Fc-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1669256076&t=d7ad231506e66a17b0016cac6a63a497"
+          alt=""
+        />
+        <br />
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum
+        dolor sit, amet consectetur adipisicing elit. Eveniet nemo laborum,
+        quisquam neque et adipisci. Minima, ratione amet adipisci deserunt,
+        possimus cum soluta dolorum earum nostrum suscipit placeat illo quis.
+      </div>
+      <div>
+        <img
+          src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fblog%2F202105%2F04%2F20210504062111_d8dc3.thumb.1000_0.jpg&refer=http%3A%2F%2Fc-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1669256076&t=d7ad231506e66a17b0016cac6a63a497"
+          alt=""
+        />
+        <br />
+        Repellat quibusdam vero reiciendis incidunt, obcaecati totam eaque
+        minima atque voluptas, possimus cum soluta dolorum earum nostrum
+        suscipit placeat illo quis.
+      </div>
+      <div>
+        <img
+          src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fblog%2F202105%2F04%2F20210504062111_d8dc3.thumb.1000_0.jpg&refer=http%3A%2F%2Fc-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1669256076&t=d7ad231506e66a17b0016cac6a63a497"
+          alt=""
+        />
+        <br />
+        recusandae accusantium sint quas doloribus soluta tempora est distinctio
+        quam repellendus?
+      </div>
+    </div>
+    <a href="">我是a</a>
+		<div id="wsdiv" class="ellipsis">
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum
+			dolor sit, amet consectetur adipisicing elit. Eveniet nemo laborum,
+			quisquam neque et adipisci. Minima, ratione amet adipisci deserunt,
+			possimus cum soluta dolorum earum nostrum suscipit placeat illo quis.
+		</div>
+    <script type="text/javascript">
+      console.log(s)
+      new Vue({
+        el: '#app',
+        data: {
+          myText: 'aaa'
+        },
+        methods: {
+          change(e) {
+            console.log(e)
+          }
+        }
+      })
+
+      function A() {
+        this.a = 1
+      }
+      const a = new A()
+      console.log(a, a.prototype, a.__proto__, Object.prototype)
+
+      const b = Object.create(null)
+      console.log(b)
+
+      const obj = {
+        a: 1
+      }
+
+      const p = new Proxy(obj, {
+        get(target, key) {
+          return target[key] + 1
+        },
+        set(target, key, val) {
+          target[key] = val
+          return true
+        }
+      })
+      const p2 = new Proxy(p, {
+        get(target, key) {
+          return target[key] + 1
+        },
+        set(target, key, val) {
+          target[key] = val
+          return true
+        }
+      })
+
+      function getPoints(str) {
+        if (!(typeof str === 'string')) return console.log('非字符串')
+        str = str.replace(/\s/g, '')
+        if (/([^(\d)\/X-])/.test(str)) return console.log('非法字符串')
+        let len = str.length
+        if (len < 22 && len > 11) {
+          let arr = str.split('')
+          let point = 0
+          for (let i = 0, l = arr.length; i < l; ++i) {
+            if (arr[i] === 'X') {
+              point =
+                point +
+                transPoint(arr[i]) +
+                transPoint(arr[i + 1]) +
+                transPoint(arr[i + 2])
+              if (i === l - 3) break
+            } else if (arr[i] === '/') {
+              point =
+                point + (10 - transPoint(arr[i - 1])) + transPoint(arr[i + 1])
+              if (i === l - 2) break
+            } else if (arr[i] !== '-') {
+              point = point + arr[i] * 1
+            }
+          }
+          if (isNaN(point)) return
+          return point
+        }
+      }
+      function transPoint(char) {
+        if (char === 'X') return 10
+        else if (char === '-') return 0
+        else return char / 1
+      }
+      getPoints('5/5/5/5/5/5/5/5/5/5/5')
+      getPoints('XXXXXXXXXX55')
+      getPoints('9-9-9-9-9-9-9-9-9-9-')
+      console.log(getPoints('X9-9-9-9-9-9-9-9-9-'))
+
+      function combination(data) {
+        let arr = []
+        data.forEach((item) => {
+          arr.push(item.arr)
+        })
+        let cArr = [],
+          i = 1,
+          l = arr.length,
+          copyArr
+        if (l > 1) {
+          cArr = arr[0]
+          for (; i < l; i++) {
+            copyArr = cArr.slice()
+            cArr = []
+            copyArr.forEach((item) => {
+              arr[i].forEach((item2) => {
+                cArr.push(item + '+' + item2)
+              })
+            })
+          }
+        } else {
+          cArr = arr[0] || []
+        }
+        return cArr
+      }
+
+      console.log(
+        combination([
+          {
+            attr: '颜色',
+            arr: ['红', '黄', '1']
+          },
+          {
+            attr: '材质',
+            arr: ['木头', '1', '2']
+          },
+          {
+            attr: '材质',
+            arr: ['木头', '1', '2']
+          }
+        ])
+      )
+			console.dir(wsdiv)
+			
+			
+			
+			function mult(a, b) {
+				let num = 1
+				if(typeof a === 'number') num = a
+				if(typeof a === 'function') { 
+					b = a  
+					a = 1
+				}
+				if(this && this !== window) num = this * a
+				if(b) b(num)
+				let fn = mult.bind(num)
+				fn.num = num
+				fn.mult = fn
+				return fn
+			}
+			
+			m4 = mult(1).mult(2).mult(3, console.log)
+			m4(console.log)
+			Number.prototype.mult = function(a = 1, b) {
+				const typeA = typeof a,
+							typeB = typeof b
+				if(typeA === 'function') {
+					b = a
+					a = 1
+					b(this * a)
+				} else 1
+			}
+			
+			let dataList = [{ parentId: 0, categoryId: 3, children: [] }, { parentId: 0, categoryId: 1, children: [] }, 
+			{ parentId: 0, categoryId: 2, children: [] }, { parentId: 1, categoryId: 3, children: [] }]
+			
+			function getTree(dataList) {
+				for(const i of dataList) {
+					if(dataList[i].children.length === 0) {
+						dataList[i].children = dataList.filter(item => item.categoryId === dataList[i].parentId)
+					}
+				}
+				return dataList.filter(item => item.categoryId)
+			}
+			
+			
+			class P {
+				constructor(name) {
+					this.name = name
+				}
+				get name() {
+					return this._name
+				}
+				set name(val) {
+					console.log(1)
+					this._name = val
+				}
+			}
+			
+			function P2(name) {
+				this.name = name
+			}
+			// P2.prototype._name = 2
+			Object.defineProperty(P2.prototype, 'name', {
+				enumerable: true,
+				configurable: true,
+				get() {
+					console.log('get')
+					return this._name
+				},
+				set(val) {
+					console.log('set', this)
+					this._name = val
+				}
+			})
+			
+			let pp = new P2(2)
+			console.log(pp)
+			
+			let i = 0
+			let arr7 = [1,2,3,4,5]
+			for(; i< arr7.length; i++) {
+				(function(i) {
+					arr7[i]= function() { console.log(i) }
+				})(i)
+			    
+			}
+			arr7[0]()
+    </script>
+  </body>
+</html>

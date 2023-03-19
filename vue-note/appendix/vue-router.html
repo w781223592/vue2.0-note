@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>vue-router | 卷心菜笔记</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <link rel="icon" href="./logo.jpg">
+    <meta name="description" content="基于vue@2.6.14的学习笔记">
+    
+    <link rel="preload" href="./assets/css/0.styles.88a4e9f5.css" as="style"><link rel="preload" href="./assets/js/app.d5acc79b.js" as="script"><link rel="preload" href="./assets/js/2.b590321b.js" as="script"><link rel="preload" href="./assets/js/17.f8249aae.js" as="script"><link rel="prefetch" href="./assets/js/10.28c22c34.js"><link rel="prefetch" href="./assets/js/11.b72984a2.js"><link rel="prefetch" href="./assets/js/12.7a356702.js"><link rel="prefetch" href="./assets/js/13.4d2ebb73.js"><link rel="prefetch" href="./assets/js/14.7e5c333b.js"><link rel="prefetch" href="./assets/js/15.33ab5b85.js"><link rel="prefetch" href="./assets/js/16.26bfda56.js"><link rel="prefetch" href="./assets/js/18.8b77e49e.js"><link rel="prefetch" href="./assets/js/19.4ea26ad8.js"><link rel="prefetch" href="./assets/js/20.5c1ea347.js"><link rel="prefetch" href="./assets/js/21.439ae5de.js"><link rel="prefetch" href="./assets/js/22.bc9ba01a.js"><link rel="prefetch" href="./assets/js/23.065a389a.js"><link rel="prefetch" href="./assets/js/24.f02ba9a4.js"><link rel="prefetch" href="./assets/js/25.dc260f1b.js"><link rel="prefetch" href="./assets/js/26.244eb099.js"><link rel="prefetch" href="./assets/js/27.e697ae03.js"><link rel="prefetch" href="./assets/js/28.a44f6cb5.js"><link rel="prefetch" href="./assets/js/29.a2c96871.js"><link rel="prefetch" href="./assets/js/3.609c0cd5.js"><link rel="prefetch" href="./assets/js/30.6bee233a.js"><link rel="prefetch" href="./assets/js/31.526a0347.js"><link rel="prefetch" href="./assets/js/32.ec625040.js"><link rel="prefetch" href="./assets/js/33.176d019f.js"><link rel="prefetch" href="./assets/js/34.f8e99996.js"><link rel="prefetch" href="./assets/js/35.99d9ab20.js"><link rel="prefetch" href="./assets/js/36.3ac859f6.js"><link rel="prefetch" href="./assets/js/37.56c9e9af.js"><link rel="prefetch" href="./assets/js/38.79ffb3a9.js"><link rel="prefetch" href="./assets/js/39.78873087.js"><link rel="prefetch" href="./assets/js/4.8492e10d.js"><link rel="prefetch" href="./assets/js/40.090b8936.js"><link rel="prefetch" href="./assets/js/41.aff618f5.js"><link rel="prefetch" href="./assets/js/42.b7419902.js"><link rel="prefetch" href="./assets/js/43.08762476.js"><link rel="prefetch" href="./assets/js/44.c271147a.js"><link rel="prefetch" href="./assets/js/45.e3aa209f.js"><link rel="prefetch" href="./assets/js/46.e9f719cf.js"><link rel="prefetch" href="./assets/js/47.9dbe7a9c.js"><link rel="prefetch" href="./assets/js/48.6d4f4e24.js"><link rel="prefetch" href="./assets/js/49.d8c44484.js"><link rel="prefetch" href="./assets/js/5.9754c995.js"><link rel="prefetch" href="./assets/js/50.06915873.js"><link rel="prefetch" href="./assets/js/51.95bc78ef.js"><link rel="prefetch" href="./assets/js/52.1bb1ed2a.js"><link rel="prefetch" href="./assets/js/53.85e86e9e.js"><link rel="prefetch" href="./assets/js/54.09fdaeea.js"><link rel="prefetch" href="./assets/js/55.d4016f45.js"><link rel="prefetch" href="./assets/js/56.dba7b1b2.js"><link rel="prefetch" href="./assets/js/57.9dde0f1c.js"><link rel="prefetch" href="./assets/js/58.72119fb4.js"><link rel="prefetch" href="./assets/js/59.487cd045.js"><link rel="prefetch" href="./assets/js/6.e61ed567.js"><link rel="prefetch" href="./assets/js/60.0d871d2d.js"><link rel="prefetch" href="./assets/js/61.533b4fa7.js"><link rel="prefetch" href="./assets/js/62.aaa2503f.js"><link rel="prefetch" href="./assets/js/63.7f5805e7.js"><link rel="prefetch" href="./assets/js/64.9db1f00f.js"><link rel="prefetch" href="./assets/js/65.d081a9d0.js"><link rel="prefetch" href="./assets/js/66.e26704f9.js"><link rel="prefetch" href="./assets/js/67.3a264983.js"><link rel="prefetch" href="./assets/js/68.285e16f9.js"><link rel="prefetch" href="./assets/js/69.6c656e15.js"><link rel="prefetch" href="./assets/js/7.2adcf0d8.js"><link rel="prefetch" href="./assets/js/70.8579a645.js"><link rel="prefetch" href="./assets/js/71.45029e1d.js"><link rel="prefetch" href="./assets/js/72.d94d691b.js"><link rel="prefetch" href="./assets/js/73.4b07003f.js"><link rel="prefetch" href="./assets/js/74.360630d3.js"><link rel="prefetch" href="./assets/js/75.fbb3c111.js"><link rel="prefetch" href="./assets/js/76.cc64c3e2.js"><link rel="prefetch" href="./assets/js/77.31e5cc90.js"><link rel="prefetch" href="./assets/js/78.acb73a36.js"><link rel="prefetch" href="./assets/js/79.232d6d8b.js"><link rel="prefetch" href="./assets/js/8.f23d7123.js"><link rel="prefetch" href="./assets/js/80.055408d9.js"><link rel="prefetch" href="./assets/js/81.955667b3.js"><link rel="prefetch" href="./assets/js/82.d60cdc5d.js"><link rel="prefetch" href="./assets/js/83.a5260291.js"><link rel="prefetch" href="./assets/js/84.790bfe99.js"><link rel="prefetch" href="./assets/js/85.8c50e659.js"><link rel="prefetch" href="./assets/js/86.4e4dd176.js"><link rel="prefetch" href="./assets/js/87.9c713ef2.js"><link rel="prefetch" href="./assets/js/88.1b1f4df4.js"><link rel="prefetch" href="./assets/js/89.c7c6f297.js"><link rel="prefetch" href="./assets/js/9.d5fa6ae7.js"><link rel="prefetch" href="./assets/js/90.5bfdf869.js">
+    <link rel="stylesheet" href="./assets/css/0.styles.88a4e9f5.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/./" class="home-link router-link-active"><!----> <span class="site-name">卷心菜笔记</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/./main/" class="nav-link">
+  正文
+</a></div><div class="nav-item"><a href="/./appendix/mergeOptions.html" class="nav-link">
+  附录
+</a></div><div class="nav-item"><a href="/./util/" class="nav-link">
+  工具
+</a></div><div class="nav-item"><a href="https://github.com/w781223592/vue2.0-note" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Gitee
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/./main/" class="nav-link">
+  正文
+</a></div><div class="nav-item"><a href="/./appendix/mergeOptions.html" class="nav-link">
+  附录
+</a></div><div class="nav-item"><a href="/./util/" class="nav-link">
+  工具
+</a></div><div class="nav-item"><a href="https://github.com/w781223592/vue2.0-note" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Gitee
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>附录</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/./appendix/mergeOptions.html" class="sidebar-link">合并options</a></li><li><a href="/./appendix/initProxy.html" class="sidebar-link">初始化proxy</a></li><li><a href="/./appendix/initRender.html" class="sidebar-link">初始化render</a></li><li><a href="/./appendix/initState.html" class="sidebar-link">初始化state</a></li><li><a href="/./appendix/watcher.html" class="sidebar-link">watcher</a></li><li><a href="/./appendix/patch.html" class="sidebar-link">patch</a></li><li><a href="/./appendix/vue-router.html" aria-current="page" class="active sidebar-link">vue-router</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/./appendix/vue-router.html#第一部分-处理完整路径" class="sidebar-link">第一部分 处理完整路径</a></li><li class="sidebar-sub-header"><a href="/./appendix/vue-router.html#第二部分-解析路径" class="sidebar-link">第二部分 解析路径</a></li><li class="sidebar-sub-header"><a href="/./appendix/vue-router.html#第三部分-abort" class="sidebar-link">第三部分 abort</a></li><li class="sidebar-sub-header"><a href="/./appendix/vue-router.html#第四部分-滚动行为" class="sidebar-link">第四部分 滚动行为</a></li></ul></li><li><a href="/./appendix/compile.html" class="sidebar-link">compile</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="vue-router"><a href="#vue-router" class="header-anchor">#</a> vue-router</h1> <h2 id="第一部分-处理完整路径"><a href="#第一部分-处理完整路径" class="header-anchor">#</a> 第一部分 处理完整路径</h2> <p>getFullPath方法定义于<code>util/route.js</code>中。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token function">getFullPath</span> <span class="token punctuation">(</span>
+  <span class="token punctuation">{</span> path<span class="token punctuation">,</span> query <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span> hash <span class="token operator">=</span> <span class="token string">''</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  _stringifyQuery
+<span class="token punctuation">)</span><span class="token operator">:</span> string <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> stringify <span class="token operator">=</span> _stringifyQuery <span class="token operator">||</span> stringifyQuery
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>path <span class="token operator">||</span> <span class="token string">'/'</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token function">stringify</span><span class="token punctuation">(</span>query<span class="token punctuation">)</span> <span class="token operator">+</span> hash
+<span class="token punctuation">}</span>
+</code></pre></div><p>如果传入自定义的<code>stringifyQuery</code>方法就采用自定义方法，否则采用默认的方法加密
+在<code>util/query.js</code>中</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">stringifyQuery</span> <span class="token punctuation">(</span><span class="token parameter"><span class="token literal-property property">obj</span><span class="token operator">:</span> Dictionary<span class="token operator">&lt;</span>string<span class="token operator">&gt;</span></span><span class="token punctuation">)</span><span class="token operator">:</span> string <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> res <span class="token operator">=</span> obj
+    <span class="token operator">?</span> Object<span class="token punctuation">.</span><span class="token function">keys</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span>
+      <span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token parameter">key</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token keyword">const</span> val <span class="token operator">=</span> obj<span class="token punctuation">[</span>key<span class="token punctuation">]</span>
+
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>val <span class="token operator">===</span> <span class="token keyword">undefined</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token keyword">return</span> <span class="token string">''</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>val <span class="token operator">===</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token keyword">return</span> <span class="token function">encode</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>Array<span class="token punctuation">.</span><span class="token function">isArray</span><span class="token punctuation">(</span>val<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token keyword">const</span> result <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+          val<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token parameter">val2</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>val2 <span class="token operator">===</span> <span class="token keyword">undefined</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+              <span class="token keyword">return</span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>val2 <span class="token operator">===</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+              result<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token function">encode</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span><span class="token punctuation">)</span>
+            <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+              result<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token function">encode</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">'='</span> <span class="token operator">+</span> <span class="token function">encode</span><span class="token punctuation">(</span>val2<span class="token punctuation">)</span><span class="token punctuation">)</span>
+            <span class="token punctuation">}</span>
+          <span class="token punctuation">}</span><span class="token punctuation">)</span>
+          <span class="token keyword">return</span> result<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token string">'&amp;'</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> <span class="token function">encode</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">'='</span> <span class="token operator">+</span> <span class="token function">encode</span><span class="token punctuation">(</span>val<span class="token punctuation">)</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span>
+      <span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span><span class="token parameter">x</span> <span class="token operator">=&gt;</span> x<span class="token punctuation">.</span>length <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">)</span>
+      <span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token string">'&amp;'</span><span class="token punctuation">)</span>
+    <span class="token operator">:</span> <span class="token keyword">null</span>
+  <span class="token keyword">return</span> res <span class="token operator">?</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">?</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>res<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span> <span class="token operator">:</span> <span class="token string">''</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>看起来非常复杂，其实就是对一些参数做了处理，比如对象、数组之类，通过encode方法进行编码，其定义如下</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> encodeReserveRE <span class="token operator">=</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">[!'()*]</span><span class="token regex-delimiter">/</span><span class="token regex-flags">g</span></span>
+<span class="token comment">// !'()*转化为 %21%27%28%29%2a</span>
+<span class="token keyword">const</span> <span class="token function-variable function">encodeReserveReplacer</span> <span class="token operator">=</span> <span class="token parameter">c</span> <span class="token operator">=&gt;</span> <span class="token string">'%'</span> <span class="token operator">+</span> c<span class="token punctuation">.</span><span class="token function">charCodeAt</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token number">16</span><span class="token punctuation">)</span>
+<span class="token keyword">const</span> commaRE <span class="token operator">=</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">%2C</span><span class="token regex-delimiter">/</span><span class="token regex-flags">g</span></span> <span class="token comment">// ,</span>
+
+<span class="token comment">// fixed encodeURIComponent which is more conformant to RFC3986:</span>
+<span class="token comment">// - escapes [!'()*]</span>
+<span class="token comment">// - preserve commas</span>
+<span class="token keyword">const</span> <span class="token function-variable function">encode</span> <span class="token operator">=</span> <span class="token parameter">str</span> <span class="token operator">=&gt;</span>
+  <span class="token function">encodeURIComponent</span><span class="token punctuation">(</span>str<span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span>encodeReserveRE<span class="token punctuation">,</span> encodeReserveReplacer<span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span>commaRE<span class="token punctuation">,</span> <span class="token string">','</span><span class="token punctuation">)</span>
+</code></pre></div><p>其实就是把一些特殊符号编码，这是根据RFC3986规范来的</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token function">stringifyQuery</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    <span class="token literal-property property">foo</span><span class="token operator">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">bar</span><span class="token operator">:</span> <span class="token string">''</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">arr</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token keyword">null</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+ <span class="token comment">// '?foo&amp;bar=&amp;arr=1&amp;arr&amp;arr=3'</span>
+</code></pre></div><p>这是<code>stringifyQuery</code>执行与返回结果，具体实现我们就不去一一分析了。</p> <p><code>formatMatch</code>方法也定义于<code>util/route.js</code>中</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token function">formatMatch</span> <span class="token punctuation">(</span><span class="token parameter"><span class="token literal-property property">record</span><span class="token operator">:</span> <span class="token operator">?</span>RouteRecord</span><span class="token punctuation">)</span><span class="token operator">:</span> Array<span class="token operator">&lt;</span>RouteRecord<span class="token operator">&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> res <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+  <span class="token keyword">while</span> <span class="token punctuation">(</span>record<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    res<span class="token punctuation">.</span><span class="token function">unshift</span><span class="token punctuation">(</span>record<span class="token punctuation">)</span>
+    record <span class="token operator">=</span> record<span class="token punctuation">.</span>parent
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> res
+<span class="token punctuation">}</span>
+</code></pre></div><p>它的定义就简单许多了，先初始化<code>res</code>数组，如果传入了<code>record</code>对象并且不为空就，<code>record</code>我们在8.3小节已经了解过了。这里就是把路由<code>record</code>以及它的父级存储到<code>res</code>中，直到没有父级为止，顺序为父在前，子在后。</p> <h2 id="第二部分-解析路径"><a href="#第二部分-解析路径" class="header-anchor">#</a> 第二部分 解析路径</h2> <p><code>normalizeLocation</code>定义于<code>util/location.js</code></p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">normalizeLocation</span> <span class="token punctuation">(</span>
+  <span class="token parameter"><span class="token literal-property property">raw</span><span class="token operator">:</span> RawLocation<span class="token punctuation">,</span>
+  <span class="token literal-property property">current</span><span class="token operator">:</span> <span class="token operator">?</span>Route<span class="token punctuation">,</span>
+  <span class="token literal-property property">append</span><span class="token operator">:</span> <span class="token operator">?</span>boolean<span class="token punctuation">,</span>
+  <span class="token literal-property property">router</span><span class="token operator">:</span> <span class="token operator">?</span>VueRouter</span>
+<span class="token punctuation">)</span><span class="token operator">:</span> Location <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> <span class="token literal-property property">next</span><span class="token operator">:</span> Location <span class="token operator">=</span> <span class="token keyword">typeof</span> raw <span class="token operator">===</span> <span class="token string">'string'</span> <span class="token operator">?</span> <span class="token punctuation">{</span> <span class="token literal-property property">path</span><span class="token operator">:</span> raw <span class="token punctuation">}</span> <span class="token operator">:</span> raw
+  <span class="token comment">// named target</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>next<span class="token punctuation">.</span>_normalized<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> next
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>next<span class="token punctuation">.</span>name<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    next <span class="token operator">=</span> <span class="token function">extend</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span> raw<span class="token punctuation">)</span>
+    <span class="token keyword">const</span> params <span class="token operator">=</span> next<span class="token punctuation">.</span>params
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>params <span class="token operator">&amp;&amp;</span> <span class="token keyword">typeof</span> params <span class="token operator">===</span> <span class="token string">'object'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      next<span class="token punctuation">.</span>params <span class="token operator">=</span> <span class="token function">extend</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span> params<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> next
+  <span class="token punctuation">}</span>
+
+  <span class="token comment">// relative params</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>next<span class="token punctuation">.</span>path <span class="token operator">&amp;&amp;</span> next<span class="token punctuation">.</span>params <span class="token operator">&amp;&amp;</span> current<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    next <span class="token operator">=</span> <span class="token function">extend</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span> next<span class="token punctuation">)</span>
+    next<span class="token punctuation">.</span>_normalized <span class="token operator">=</span> <span class="token boolean">true</span>
+    <span class="token keyword">const</span> <span class="token literal-property property">params</span><span class="token operator">:</span> any <span class="token operator">=</span> <span class="token function">extend</span><span class="token punctuation">(</span><span class="token function">extend</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span> current<span class="token punctuation">.</span>params<span class="token punctuation">)</span><span class="token punctuation">,</span> next<span class="token punctuation">.</span>params<span class="token punctuation">)</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>current<span class="token punctuation">.</span>name<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      next<span class="token punctuation">.</span>name <span class="token operator">=</span> current<span class="token punctuation">.</span>name
+      next<span class="token punctuation">.</span>params <span class="token operator">=</span> params
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>current<span class="token punctuation">.</span>matched<span class="token punctuation">.</span>length<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> rawPath <span class="token operator">=</span> current<span class="token punctuation">.</span>matched<span class="token punctuation">[</span>current<span class="token punctuation">.</span>matched<span class="token punctuation">.</span>length <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span>path
+      next<span class="token punctuation">.</span>path <span class="token operator">=</span> <span class="token function">fillParams</span><span class="token punctuation">(</span>rawPath<span class="token punctuation">,</span> params<span class="token punctuation">,</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">path </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>current<span class="token punctuation">.</span>path<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>process<span class="token punctuation">.</span>env<span class="token punctuation">.</span><span class="token constant">NODE_ENV</span> <span class="token operator">!==</span> <span class="token string">'production'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token function">warn</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">,</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">relative params navigation requires a current route.</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> next
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">const</span> parsedPath <span class="token operator">=</span> <span class="token function">parsePath</span><span class="token punctuation">(</span>next<span class="token punctuation">.</span>path <span class="token operator">||</span> <span class="token string">''</span><span class="token punctuation">)</span>
+  <span class="token keyword">const</span> basePath <span class="token operator">=</span> <span class="token punctuation">(</span>current <span class="token operator">&amp;&amp;</span> current<span class="token punctuation">.</span>path<span class="token punctuation">)</span> <span class="token operator">||</span> <span class="token string">'/'</span>
+  <span class="token keyword">const</span> path <span class="token operator">=</span> parsedPath<span class="token punctuation">.</span>path
+    <span class="token operator">?</span> <span class="token function">resolvePath</span><span class="token punctuation">(</span>parsedPath<span class="token punctuation">.</span>path<span class="token punctuation">,</span> basePath<span class="token punctuation">,</span> append <span class="token operator">||</span> next<span class="token punctuation">.</span>append<span class="token punctuation">)</span>
+    <span class="token operator">:</span> basePath
+
+  <span class="token keyword">const</span> query <span class="token operator">=</span> <span class="token function">resolveQuery</span><span class="token punctuation">(</span>
+    parsedPath<span class="token punctuation">.</span>query<span class="token punctuation">,</span>
+    next<span class="token punctuation">.</span>query<span class="token punctuation">,</span>
+    router <span class="token operator">&amp;&amp;</span> router<span class="token punctuation">.</span>options<span class="token punctuation">.</span>parseQuery
+  <span class="token punctuation">)</span>
+
+  <span class="token keyword">let</span> hash <span class="token operator">=</span> next<span class="token punctuation">.</span>hash <span class="token operator">||</span> parsedPath<span class="token punctuation">.</span>hash
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>hash <span class="token operator">&amp;&amp;</span> hash<span class="token punctuation">.</span><span class="token function">charAt</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span> <span class="token operator">!==</span> <span class="token string">'#'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    hash <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">#</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>hash<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">return</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">_normalized</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    path<span class="token punctuation">,</span>
+    query<span class="token punctuation">,</span>
+    hash
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>首先定义了<code>next</code>，如果<code>raw</code>是string类型，就把它写成一个<code>{ path: raw }</code>，否则就等于<code>raw</code>。接下来判断如果<code>next._normalized</code>已经标准化过的话就直接返回<code>next</code>。再如果<code>next.name</code>存在的话就通过<code>extend</code>方法去浅克隆一个<code>raw</code>对象。<code>extend</code>方法我们在分析<code>vue</code>源码时候已经见过了，这里<code>extend</code>方法和<code>vue</code>中定义是一致的。然后还要获取<code>next.params</code>，显然这是在<code>raw</code>为一个对象时才会有效。如果<code>params</code>是一个<code>object</code>，那就再次浅克隆并赋值给<code>next</code>的<code>params</code>。接下来也是对一些参数的处理，其实这部分内容我们目前还不会走到，所以暂时还没必要去分析。<br>
+我们来直接往下看<code>parsedPath</code>定义，在<code>util/path.js</code>中</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">parsePath</span> <span class="token punctuation">(</span><span class="token parameter"><span class="token literal-property property">path</span><span class="token operator">:</span> string</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">path</span><span class="token operator">:</span> string<span class="token punctuation">;</span>
+  <span class="token literal-property property">query</span><span class="token operator">:</span> string<span class="token punctuation">;</span>
+  <span class="token literal-property property">hash</span><span class="token operator">:</span> string<span class="token punctuation">;</span>
+<span class="token punctuation">}</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> hash <span class="token operator">=</span> <span class="token string">''</span>
+  <span class="token keyword">let</span> query <span class="token operator">=</span> <span class="token string">''</span>
+
+  <span class="token keyword">const</span> hashIndex <span class="token operator">=</span> path<span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span><span class="token string">'#'</span><span class="token punctuation">)</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>hashIndex <span class="token operator">&gt;=</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    hash <span class="token operator">=</span> path<span class="token punctuation">.</span><span class="token function">slice</span><span class="token punctuation">(</span>hashIndex<span class="token punctuation">)</span>
+    path <span class="token operator">=</span> path<span class="token punctuation">.</span><span class="token function">slice</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> hashIndex<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">const</span> queryIndex <span class="token operator">=</span> path<span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span><span class="token string">'?'</span><span class="token punctuation">)</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>queryIndex <span class="token operator">&gt;=</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    query <span class="token operator">=</span> path<span class="token punctuation">.</span><span class="token function">slice</span><span class="token punctuation">(</span>queryIndex <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span>
+    path <span class="token operator">=</span> path<span class="token punctuation">.</span><span class="token function">slice</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> queryIndex<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">return</span> <span class="token punctuation">{</span>
+    path<span class="token punctuation">,</span>
+    query<span class="token punctuation">,</span>
+    hash
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>首先定义<code>hash</code>和<code>query</code>然后从patch中获取<code>#</code>位置索引，如果<code>index</code>不等于-1，就将<code>hash</code>值设置为<code>#</code>和<code>#后面字符串</code>。<code>path</code>设置为<code>#前的字符串</code>。然后同样查找 <code>?</code> 位置，并以同样方式处理<code>query</code>和修改后的<code>path</code>，但是<code>query</code>不包括 <code>?</code> 。<code>path</code>则是重新赋值。最后返回<code>path、query</code>和<code>hash</code>字符串。所以<code>parsePath</code>主要是用来解析<code>path</code>的。<br>
+接着<code>normalizeLocation</code>方法定义基础路径<code>basePath</code>，然后定义最终路径<code>path</code>。path在parsedPath.path存在时会调用<code>resolvePath</code>方法处理，否则返回<code>basePath</code>。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">resolvePath</span> <span class="token punctuation">(</span>
+  <span class="token parameter"><span class="token literal-property property">relative</span><span class="token operator">:</span> string<span class="token punctuation">,</span>
+  <span class="token literal-property property">base</span><span class="token operator">:</span> string<span class="token punctuation">,</span>
+  append<span class="token operator">?</span><span class="token operator">:</span> boolean</span>
+<span class="token punctuation">)</span><span class="token operator">:</span> string <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> firstChar <span class="token operator">=</span> relative<span class="token punctuation">.</span><span class="token function">charAt</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>firstChar <span class="token operator">===</span> <span class="token string">'/'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> relative
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>firstChar <span class="token operator">===</span> <span class="token string">'?'</span> <span class="token operator">||</span> firstChar <span class="token operator">===</span> <span class="token string">'#'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> base <span class="token operator">+</span> relative
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">const</span> stack <span class="token operator">=</span> base<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">'/'</span><span class="token punctuation">)</span>
+
+  <span class="token comment">// remove trailing segment if:</span>
+  <span class="token comment">// - not appending</span>
+  <span class="token comment">// - appending to trailing slash (last segment is empty)</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>append <span class="token operator">||</span> <span class="token operator">!</span>stack<span class="token punctuation">[</span>stack<span class="token punctuation">.</span>length <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    stack<span class="token punctuation">.</span><span class="token function">pop</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token comment">// resolve relative path</span>
+  <span class="token keyword">const</span> segments <span class="token operator">=</span> relative<span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">^\/</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">,</span> <span class="token string">''</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">'/'</span><span class="token punctuation">)</span>
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> segments<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> segment <span class="token operator">=</span> segments<span class="token punctuation">[</span>i<span class="token punctuation">]</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>segment <span class="token operator">===</span> <span class="token string">'..'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      stack<span class="token punctuation">.</span><span class="token function">pop</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>segment <span class="token operator">!==</span> <span class="token string">'.'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      stack<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>segment<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token comment">// ensure leading slash</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>stack<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">!==</span> <span class="token string">''</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    stack<span class="token punctuation">.</span><span class="token function">unshift</span><span class="token punctuation">(</span><span class="token string">''</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">return</span> stack<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token string">'/'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p><code>resolvePath</code>也定义在<code>util/path.js</code>中。第一个参数是相对路径，第二个参数是基础路径，第三个参数这里传入的是false。<br>
+然后取相对路径第一个字符，如果是<code>/</code>就直接返回相对路径<code>relative</code>。如果是<code>'?'</code>或者<code>#</code>号则返回<code>base + relative</code>。接下来是出现两种情况要删除尾段：</p> <ol><li>append为false</li> <li>stack最后一个为空，也就是尾部是/导致stack最后一个为空。</li></ol> <p>此时的操作就是<code>stack.pop()</code>。<br>
+接下来定义<code>segments</code>为relative去掉开头<code>/</code>并且通过<code>/</code>切割成数组，然后就是遍历数组，如果遍历的值为两个<code>.</code> 则说明是回退路径，则调用<code>stack.pop()</code>在<code>base</code>路径基础上回退一级。再如果不等于一个<code>.</code>，即不是当前路径，就<code>push segment</code>，也就是到下一级。如果<code>stack</code>第一个不是空字符串，那就在前面插入一个空字符串。这样最后将数组转换为字符串并用<code>/</code>连接时就能得到一个<code>/</code>开头的路径。<br>
+然后接着看<code>normalizeLocation</code>方法定义了query</p> <div class="language-js extra-class"><pre class="language-js"><code>  <span class="token keyword">const</span> query <span class="token operator">=</span> <span class="token function">resolveQuery</span><span class="token punctuation">(</span>
+    parsedPath<span class="token punctuation">.</span>query<span class="token punctuation">,</span>
+    next<span class="token punctuation">.</span>query<span class="token punctuation">,</span>
+    router <span class="token operator">&amp;&amp;</span> router<span class="token punctuation">.</span>options<span class="token punctuation">.</span>parseQuery
+  <span class="token punctuation">)</span>
+</code></pre></div><p>调用<code>resolveQuery</code>方法，第一个传入的是<code>parsedPath</code>返回的<code>query</code>，第二个是<code>next</code>的<code>query</code>，第三个是<code>options</code>配置的<code>parseQuery</code>方法。
+然后接下来看<code>resolveQuery</code>定义，在<code>util/query.js</code>中</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">resolveQuery</span> <span class="token punctuation">(</span>
+  <span class="token parameter"><span class="token literal-property property">query</span><span class="token operator">:</span> <span class="token operator">?</span>string<span class="token punctuation">,</span>
+  <span class="token literal-property property">extraQuery</span><span class="token operator">:</span> Dictionary<span class="token operator">&lt;</span>string<span class="token operator">&gt;</span> <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">_parseQuery</span><span class="token operator">:</span> <span class="token operator">?</span>Function</span>
+<span class="token punctuation">)</span><span class="token operator">:</span> Dictionary<span class="token operator">&lt;</span>string<span class="token operator">&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> parse <span class="token operator">=</span> _parseQuery <span class="token operator">||</span> parseQuery
+  <span class="token keyword">let</span> parsedQuery
+  <span class="token keyword">try</span> <span class="token punctuation">{</span>
+    parsedQuery <span class="token operator">=</span> <span class="token function">parse</span><span class="token punctuation">(</span>query <span class="token operator">||</span> <span class="token string">''</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    process<span class="token punctuation">.</span>env<span class="token punctuation">.</span><span class="token constant">NODE_ENV</span> <span class="token operator">!==</span> <span class="token string">'production'</span> <span class="token operator">&amp;&amp;</span> <span class="token function">warn</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">,</span> e<span class="token punctuation">.</span>message<span class="token punctuation">)</span>
+    parsedQuery <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">const</span> key <span class="token keyword">in</span> extraQuery<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> value <span class="token operator">=</span> extraQuery<span class="token punctuation">[</span>key<span class="token punctuation">]</span>
+    parsedQuery<span class="token punctuation">[</span>key<span class="token punctuation">]</span> <span class="token operator">=</span> Array<span class="token punctuation">.</span><span class="token function">isArray</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span>
+      <span class="token operator">?</span> value<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span>castQueryParamValue<span class="token punctuation">)</span>
+      <span class="token operator">:</span> <span class="token function">castQueryParamValue</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> parsedQuery
+<span class="token punctuation">}</span>
+</code></pre></div><p>首先是定义<code>parse</code>为传入的<code>parseQuery</code>或默认的<code>parseQuery</code>。然后通过<code>parse</code>处理<code>query</code>然后保存在<code>parsedQuery</code>中</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token function">parseQuery</span> <span class="token punctuation">(</span><span class="token parameter"><span class="token literal-property property">query</span><span class="token operator">:</span> string</span><span class="token punctuation">)</span><span class="token operator">:</span> Dictionary<span class="token operator">&lt;</span>string<span class="token operator">&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> res <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+
+  query <span class="token operator">=</span> query<span class="token punctuation">.</span><span class="token function">trim</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">^(\?|#|&amp;)</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">,</span> <span class="token string">''</span><span class="token punctuation">)</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>query<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> res
+  <span class="token punctuation">}</span>
+  query<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">'&amp;'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token parameter">param</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> parts <span class="token operator">=</span> param<span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">\+</span><span class="token regex-delimiter">/</span><span class="token regex-flags">g</span></span><span class="token punctuation">,</span> <span class="token string">' '</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">'='</span><span class="token punctuation">)</span>
+    <span class="token keyword">const</span> key <span class="token operator">=</span> <span class="token function">decode</span><span class="token punctuation">(</span>parts<span class="token punctuation">.</span><span class="token function">shift</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token keyword">const</span> val <span class="token operator">=</span> parts<span class="token punctuation">.</span>length <span class="token operator">&gt;</span> <span class="token number">0</span> <span class="token operator">?</span> <span class="token function">decode</span><span class="token punctuation">(</span>parts<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token string">'='</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">:</span> <span class="token keyword">null</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>res<span class="token punctuation">[</span>key<span class="token punctuation">]</span> <span class="token operator">===</span> <span class="token keyword">undefined</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      res<span class="token punctuation">[</span>key<span class="token punctuation">]</span> <span class="token operator">=</span> val
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>Array<span class="token punctuation">.</span><span class="token function">isArray</span><span class="token punctuation">(</span>res<span class="token punctuation">[</span>key<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      res<span class="token punctuation">[</span>key<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>val<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+      res<span class="token punctuation">[</span>key<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span>res<span class="token punctuation">[</span>key<span class="token punctuation">]</span><span class="token punctuation">,</span> val<span class="token punctuation">]</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token keyword">return</span> res
+<span class="token punctuation">}</span>
+</code></pre></div><p><code>parseQuery</code>方法比较简单，首先将<code>query</code>首尾空格去掉，然后将开头的<code>?、#、&amp;</code>字符替换为空字符串。如果这时<code>query</code>为空就直接返回空对象<code>res</code>。接下来将<code>query</code>通过<code>&amp;</code>切割为数组并<code>forEach</code>遍历，把遍历项<code>+号</code>转化为空格，然后再通过<code>=</code>切割为数组保存在<code>parts</code>中。<br>
+如果<code>param</code>是<code>id=1</code>字符串，<code>parts</code>就是<code>[id, 1]</code>这样的数组，然后我们将<code>parts.shift</code>就是得到数组第一项，并且防止它是编码过的内容，还需要通过<code>decode</code>去解码。这里<code>decode</code>定义比较简单就不去专门分析了，下面是<code>decode</code>代码</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">decode</span> <span class="token punctuation">(</span><span class="token parameter"><span class="token literal-property property">str</span><span class="token operator">:</span> string</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">try</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token function">decodeURIComponent</span><span class="token punctuation">(</span>str<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>process<span class="token punctuation">.</span>env<span class="token punctuation">.</span><span class="token constant">NODE_ENV</span> <span class="token operator">!==</span> <span class="token string">'production'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token function">warn</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">,</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">Error decoding &quot;</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>str<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">&quot;. Leaving it intact.</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> str
+<span class="token punctuation">}</span>
+</code></pre></div><p>然后就是获取<code>val</code>，如果<code>parts</code>数组不为0的话说明是有参数值得，然后再把<code>[1]</code>转化成字符串1进行解码，至于这里为什么<code>join</code>传入<code>=</code>号呢，那是因为参数值如果本身就是<code>1=1</code>这种带<code>=号</code>形式的话，直接<code>join(</code> <code>)</code>就得不到原来结果了。如果数组长0就赋值为<code>null</code>。<br>
+接下来是对<code>res[key]</code>是否完全等于<code>undefined</code>的判断，如果是则给它赋值为<code>val</code>，否则再判断它是不是数组，如果是数组就把<code>val</code>添加进去。可能看到这里我们都不太清楚这段代码有什么意义，但是看到最后else逻辑我想应该会豁然开朗吧。它就是将我们的数组<code>query</code>再变回数组形式，然后返回。<br>
+然后再回来看<code>resolveQuery</code>，最后是一个<code>for</code>循环，它主要是靠<code>castQueryParamValue</code>方法实现功能，然后我们来看<code>castQueryParamValue</code></p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> <span class="token function-variable function">castQueryParamValue</span> <span class="token operator">=</span> <span class="token parameter">value</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span>value <span class="token operator">==</span> <span class="token keyword">null</span> <span class="token operator">||</span> <span class="token keyword">typeof</span> value <span class="token operator">===</span> <span class="token string">'object'</span> <span class="token operator">?</span> value <span class="token operator">:</span> <span class="token function">String</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre></div><p>其实就是<code>extraQuery</code>对象和<code>parsedQuery</code>对象做了个合并。所以<code>resolveQuery</code>方法主要是将<code>stringifyQuery</code>方法转化过的<code>query</code>参数进行解析恢复。<br>
+最后我们回到<code>normalizeLocation</code>方法中</p> <div class="language-js extra-class"><pre class="language-js"><code>  <span class="token keyword">let</span> hash <span class="token operator">=</span> next<span class="token punctuation">.</span>hash <span class="token operator">||</span> parsedPath<span class="token punctuation">.</span>hash
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>hash <span class="token operator">&amp;&amp;</span> hash<span class="token punctuation">.</span><span class="token function">charAt</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span> <span class="token operator">!==</span> <span class="token string">'#'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    hash <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">#</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>hash<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">return</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">_normalized</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    path<span class="token punctuation">,</span>
+    query<span class="token punctuation">,</span>
+    hash
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>最后标准化了<code>hash</code>的格式，然后返回<code>path、query、hash和_normalized</code>标识位。但是在某些情况下是直接返回<code>next</code>对象的，这时<code>next</code>会有<code>name、params</code>等其他属性</p> <h2 id="第三部分-abort"><a href="#第三部分-abort" class="header-anchor">#</a> 第三部分 abort</h2> <p>abort在<code>history/base.js</code>中的<code>confirmTransition</code>方法中</p> <div class="language-js extra-class"><pre class="language-js"><code>  <span class="token keyword">const</span> <span class="token function-variable function">abort</span> <span class="token operator">=</span> <span class="token parameter">err</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token comment">// changed after adding errors with</span>
+    <span class="token comment">// https://github.com/vuejs/vue-router/pull/3047 before that change,</span>
+    <span class="token comment">// redirect and aborted navigation would produce an err == null</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token function">isNavigationFailure</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> <span class="token function">isError</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>errorCbs<span class="token punctuation">.</span>length<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>errorCbs<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token parameter">cb</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+          <span class="token function">cb</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span>
+      <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>process<span class="token punctuation">.</span>env<span class="token punctuation">.</span><span class="token constant">NODE_ENV</span> <span class="token operator">!==</span> <span class="token string">'production'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token function">warn</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">,</span> <span class="token string">'uncaught error during route navigation:'</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+        console<span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    onAbort <span class="token operator">&amp;&amp;</span> <span class="token function">onAbort</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+</code></pre></div><p>然后看<code>isNavigationFailure</code></p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">isNavigationFailure</span> <span class="token punctuation">(</span><span class="token parameter">err<span class="token punctuation">,</span> errorType</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token function">isError</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span>
+    err<span class="token punctuation">.</span>_isRouter <span class="token operator">&amp;&amp;</span>
+    <span class="token punctuation">(</span>errorType <span class="token operator">==</span> <span class="token keyword">null</span> <span class="token operator">||</span> err<span class="token punctuation">.</span>type <span class="token operator">===</span> errorType<span class="token punctuation">)</span>
+  <span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>这个方法主要是判断是否是导航失败报错，<code>isError</code>定义则是</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">isError</span> <span class="token punctuation">(</span><span class="token parameter">err</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token class-name">Object</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span><span class="token string">'Error'</span><span class="token punctuation">)</span> <span class="token operator">&gt;</span> <span class="token operator">-</span><span class="token number">1</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>通过<code>Object</code>的<code>toString</code>方法生成字符串并判断是否含有<code>Error</code>。<br>
+然后<code>abort方</code>法就是判断是非路由导航失败错误就去调用<code>errorCbs</code>中的错误回调。这个数组是由<code>History</code>去维护，没次调用<code>history.onError</code>都会添加一条错误记录</p> <div class="language-js extra-class"><pre class="language-js"><code>  <span class="token function">onError</span> <span class="token punctuation">(</span><span class="token parameter"><span class="token literal-property property">errorCb</span><span class="token operator">:</span> Function</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>errorCbs<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>errorCb<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+</code></pre></div><p>abort方法最后调用<code>onAbort</code>方法，这个是<code>confirmTransition</code>方法接收的错误回调，是由<code>transitionTo</code>方法传入的这样一个方法：</p> <div class="language-js extra-class"><pre class="language-js"><code>  <span class="token parameter">err</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>onAbort<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token function">onAbort</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>err <span class="token operator">&amp;&amp;</span> <span class="token operator">!</span><span class="token keyword">this</span><span class="token punctuation">.</span>ready<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token comment">// Initial redirection should not mark the history as ready yet</span>
+      <span class="token comment">// because it's triggered by the redirection instead</span>
+      <span class="token comment">// 初始重定向不应将历史记录标记为就绪，因为它是由重定向触发的</span>
+      <span class="token comment">// https://github.com/vuejs/vue-router/issues/3225</span>
+      <span class="token comment">// https://github.com/vuejs/vue-router/issues/3331</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token function">isNavigationFailure</span><span class="token punctuation">(</span>err<span class="token punctuation">,</span> NavigationFailureType<span class="token punctuation">.</span>redirected<span class="token punctuation">)</span> <span class="token operator">||</span> prev <span class="token operator">!==</span> <span class="token constant">START</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>ready <span class="token operator">=</span> <span class="token boolean">true</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>readyErrorCbs<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token parameter">cb</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+          <span class="token function">cb</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+</code></pre></div><p><code>transitionTo</code>方法同样也会接收一个<code>onAbort</code>方法，这里如果它接收了<code>onAbort</code>方法就先调用它，在这个过程中一直都有一个<code>err</code>在传递，这个<code>err</code>源头是<code>abort</code>方法接收的参数，后面我们根据<code>abort</code>具体调用场景来分析它。<br>
+先继续看<code>confirmTransition</code>方法的<code>onAbort</code>，接下来的if判断要判断<code>err</code>存在并且<code>this.ready</code>为假。接下来逻辑也是判断如果是非重定向导航失败或者非初始路径。这里也注释说明是初始重定向不应该将历史记录为就绪，这儿调用<code>isNavigationFailure</code>方法传入了第二个参数，这其实是个常量对象定义，在<code>errors.js</code>中</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">export</span> <span class="token keyword">const</span> NavigationFailureType <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">redirected</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">aborted</span><span class="token operator">:</span> <span class="token number">4</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">cancelled</span><span class="token operator">:</span> <span class="token number">8</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">duplicated</span><span class="token operator">:</span> <span class="token number">16</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>所以这里判断的非导航失败必须是非重定向失败，因为这里传入了第二个参数所以和上面稍有不同，所以这里第二个参数是让错误判断变得更加精细。满足了上述两个条件就让<code>ready</code>为<code>true</code>，然后要执行<code>readyErrorCbs</code>中的错误回调。
+最后我们还有个<code>err</code>问题没有解决，我们来看看<code>err</code>是怎么来的，<code>abort</code>方法有多个地方调用，我们先在找到<code>confirmTransition</code>方法中第一次调用<code>abort</code>方法的地方。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">ensureURL</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span>route<span class="token punctuation">.</span>hash<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<span class="token function">handleScroll</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>router<span class="token punctuation">,</span> current<span class="token punctuation">,</span> route<span class="token punctuation">,</span> <span class="token boolean">false</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">return</span> <span class="token function">abort</span><span class="token punctuation">(</span><span class="token function">createNavigationDuplicatedError</span><span class="token punctuation">(</span>current<span class="token punctuation">,</span> route<span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre></div><p>可以看到它是由<code>createNavigationDuplicatedError</code>函数返回的，那接下来了就来看看这个函数是做什么的，同样在<code>errors.js</code>中</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">createNavigationDuplicatedError</span> <span class="token punctuation">(</span><span class="token parameter">from<span class="token punctuation">,</span> to</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> error <span class="token operator">=</span> <span class="token function">createRouterError</span><span class="token punctuation">(</span>
+    from<span class="token punctuation">,</span>
+    to<span class="token punctuation">,</span>
+    NavigationFailureType<span class="token punctuation">.</span>duplicated<span class="token punctuation">,</span>
+    <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">Avoided redundant navigation to current location: &quot;</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>from<span class="token punctuation">.</span>fullPath<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">&quot;.</span><span class="token template-punctuation string">`</span></span>
+  <span class="token punctuation">)</span>
+  <span class="token comment">// backwards compatible with the first introduction of Errors</span>
+  error<span class="token punctuation">.</span>name <span class="token operator">=</span> <span class="token string">'NavigationDuplicated'</span>
+  <span class="token keyword">return</span> error
+<span class="token punctuation">}</span>
+</code></pre></div><p>这个函数又调用<code>createRouteError</code>方法返回<code>error</code>，然后给<code>error.name</code>赋值，最后返回<code>error</code>，所以现在又要去看<code>createRouteError</code>方法做了什么事</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token function">createRouterError</span> <span class="token punctuation">(</span><span class="token parameter">from<span class="token punctuation">,</span> to<span class="token punctuation">,</span> type<span class="token punctuation">,</span> message</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> error <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Error</span><span class="token punctuation">(</span>message<span class="token punctuation">)</span>
+  error<span class="token punctuation">.</span>_isRouter <span class="token operator">=</span> <span class="token boolean">true</span>
+  error<span class="token punctuation">.</span>from <span class="token operator">=</span> from
+  error<span class="token punctuation">.</span>to <span class="token operator">=</span> to
+  error<span class="token punctuation">.</span>type <span class="token operator">=</span> type
+
+  <span class="token keyword">return</span> error
+<span class="token punctuation">}</span>
+</code></pre></div><p>这个方法十分简单通过<code>new Error</code>新建错误对象，然后给它挂载一些基本属性，外面再包裹一层是为创建不同类型的错误提示，这里错误提示是<code>避免了到当前位置的冗余导航</code>，意思是不要重复地导航到同一个path。
+然后还有其他类型</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// 重定向</span>
+<span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">createNavigationRedirectedError</span> <span class="token punctuation">(</span><span class="token parameter">from<span class="token punctuation">,</span> to</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token function">createRouterError</span><span class="token punctuation">(</span>
+    from<span class="token punctuation">,</span>
+    to<span class="token punctuation">,</span>
+    NavigationFailureType<span class="token punctuation">.</span>redirected<span class="token punctuation">,</span>
+    <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">Redirected when going from &quot;</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>from<span class="token punctuation">.</span>fullPath<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">&quot; to &quot;</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token function">stringifyRoute</span><span class="token punctuation">(</span>
+      to
+    <span class="token punctuation">)</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">&quot; via a navigation guard.</span><span class="token template-punctuation string">`</span></span>
+  <span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 取消</span>
+<span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">createNavigationCancelledError</span> <span class="token punctuation">(</span><span class="token parameter">from<span class="token punctuation">,</span> to</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token function">createRouterError</span><span class="token punctuation">(</span>
+    from<span class="token punctuation">,</span>
+    to<span class="token punctuation">,</span>
+    NavigationFailureType<span class="token punctuation">.</span>cancelled<span class="token punctuation">,</span>
+    <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">Navigation cancelled from &quot;</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>from<span class="token punctuation">.</span>fullPath<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">&quot; to &quot;</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>
+      to<span class="token punctuation">.</span>fullPath
+    <span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">&quot; with a new navigation.</span><span class="token template-punctuation string">`</span></span>
+  <span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 中止</span>
+<span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">createNavigationAbortedError</span> <span class="token punctuation">(</span><span class="token parameter">from<span class="token punctuation">,</span> to</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token function">createRouterError</span><span class="token punctuation">(</span>
+    from<span class="token punctuation">,</span>
+    to<span class="token punctuation">,</span>
+    NavigationFailureType<span class="token punctuation">.</span>aborted<span class="token punctuation">,</span>
+    <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">Navigation aborted from &quot;</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>from<span class="token punctuation">.</span>fullPath<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">&quot; to &quot;</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>
+      to<span class="token punctuation">.</span>fullPath
+    <span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">&quot; via a navigation guard.</span><span class="token template-punctuation string">`</span></span>
+  <span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="第四部分-滚动行为"><a href="#第四部分-滚动行为" class="header-anchor">#</a> 第四部分 滚动行为</h2> <p>在<code>transitionTo</code>的回调方法中会对滚动进行处理，滚动处理都是通过<code>handleScroll</code>来处理的。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">handleScroll</span> <span class="token punctuation">(</span>
+  <span class="token parameter"><span class="token literal-property property">router</span><span class="token operator">:</span> Router<span class="token punctuation">,</span>
+  <span class="token literal-property property">to</span><span class="token operator">:</span> Route<span class="token punctuation">,</span>
+  <span class="token literal-property property">from</span><span class="token operator">:</span> Route<span class="token punctuation">,</span>
+  <span class="token literal-property property">isPop</span><span class="token operator">:</span> boolean</span>
+<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>router<span class="token punctuation">.</span>app<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">const</span> behavior <span class="token operator">=</span> router<span class="token punctuation">.</span>options<span class="token punctuation">.</span>scrollBehavior
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>behavior<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>process<span class="token punctuation">.</span>env<span class="token punctuation">.</span><span class="token constant">NODE_ENV</span> <span class="token operator">!==</span> <span class="token string">'production'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">assert</span><span class="token punctuation">(</span><span class="token keyword">typeof</span> behavior <span class="token operator">===</span> <span class="token string">'function'</span><span class="token punctuation">,</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">scrollBehavior must be a function</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+  <span class="token comment">// wait until re-render finishes before scrolling</span>
+  router<span class="token punctuation">.</span>app<span class="token punctuation">.</span><span class="token function">$nextTick</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> position <span class="token operator">=</span> <span class="token function">getScrollPosition</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">const</span> shouldScroll <span class="token operator">=</span> <span class="token function">behavior</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span>
+      router<span class="token punctuation">,</span>
+      to<span class="token punctuation">,</span>
+      from<span class="token punctuation">,</span>
+      isPop <span class="token operator">?</span> position <span class="token operator">:</span> <span class="token keyword">null</span>
+    <span class="token punctuation">)</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>shouldScroll<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">typeof</span> shouldScroll<span class="token punctuation">.</span>then <span class="token operator">===</span> <span class="token string">'function'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      shouldScroll
+        <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">shouldScroll</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+          <span class="token function">scrollToPosition</span><span class="token punctuation">(</span><span class="token punctuation">(</span>shouldScroll<span class="token operator">:</span> any<span class="token punctuation">)</span><span class="token punctuation">,</span> position<span class="token punctuation">)</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">catch</span><span class="token punctuation">(</span><span class="token parameter">err</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+          <span class="token keyword">if</span> <span class="token punctuation">(</span>process<span class="token punctuation">.</span>env<span class="token punctuation">.</span><span class="token constant">NODE_ENV</span> <span class="token operator">!==</span> <span class="token string">'production'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token function">assert</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">,</span> err<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+      <span class="token function">scrollToPosition</span><span class="token punctuation">(</span>shouldScroll<span class="token punctuation">,</span> position<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>先获取用户定义的滚动行为，如果用户没有定义就直接什么都不做。如果获取的<code>behavior</code>不是一个函数就一个错误，在页面渲染完成后去获取滚动位置</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token function">getScrollPosition</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token operator">?</span>Object <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> key <span class="token operator">=</span> <span class="token function">getStateKey</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>key<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> positionStore<span class="token punctuation">[</span>key<span class="token punctuation">]</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>通过当前<code>key</code>去获取保存滚动位置，然后执行我们定义的滚动函数，如果<code>behavior</code>返回的<code>shouldScroll</code>为空则直接返回，如过返回的是一个<code>promise</code>对象，则调用<code>then</code>方法并传入成功回调，然后这里执行一个<code>scrollToPosition</code>方法，我们先继续往后看，else则是如果返回不是函数同样去执行<code>scrollToPosition</code>。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> hashStartsWithNumberRE <span class="token operator">=</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">^#\d</span><span class="token regex-delimiter">/</span></span>
+
+<span class="token keyword">function</span> <span class="token function">scrollToPosition</span> <span class="token punctuation">(</span><span class="token parameter">shouldScroll<span class="token punctuation">,</span> position</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> isObject <span class="token operator">=</span> <span class="token keyword">typeof</span> shouldScroll <span class="token operator">===</span> <span class="token string">'object'</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>isObject <span class="token operator">&amp;&amp;</span> <span class="token keyword">typeof</span> shouldScroll<span class="token punctuation">.</span>selector <span class="token operator">===</span> <span class="token string">'string'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// getElementById would still fail if the selector contains a more complicated query like #main[data-attr]</span>
+    <span class="token comment">// but at the same time, it doesn't make much sense to select an element with an id and an extra selector</span>
+    <span class="token comment">// 如果选择器包含一个更复杂的查询，如#main[data-attr]，getElementById仍然会失败，</span>
+    <span class="token comment">// 但同时，选择一个具有id和额外选择器的元素没有多大意义</span>
+    <span class="token keyword">const</span> el <span class="token operator">=</span> hashStartsWithNumberRE<span class="token punctuation">.</span><span class="token function">test</span><span class="token punctuation">(</span>shouldScroll<span class="token punctuation">.</span>selector<span class="token punctuation">)</span> <span class="token comment">// $flow-disable-line</span>
+      <span class="token operator">?</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span>shouldScroll<span class="token punctuation">.</span>selector<span class="token punctuation">.</span><span class="token function">slice</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">// $flow-disable-line</span>
+      <span class="token operator">:</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span>shouldScroll<span class="token punctuation">.</span>selector<span class="token punctuation">)</span>
+
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>el<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">let</span> offset <span class="token operator">=</span>
+        shouldScroll<span class="token punctuation">.</span>offset <span class="token operator">&amp;&amp;</span> <span class="token keyword">typeof</span> shouldScroll<span class="token punctuation">.</span>offset <span class="token operator">===</span> <span class="token string">'object'</span>
+          <span class="token operator">?</span> shouldScroll<span class="token punctuation">.</span>offset
+          <span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+      offset <span class="token operator">=</span> <span class="token function">normalizeOffset</span><span class="token punctuation">(</span>offset<span class="token punctuation">)</span>
+      position <span class="token operator">=</span> <span class="token function">getElementPosition</span><span class="token punctuation">(</span>el<span class="token punctuation">,</span> offset<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">isValidPosition</span><span class="token punctuation">(</span>shouldScroll<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      position <span class="token operator">=</span> <span class="token function">normalizePosition</span><span class="token punctuation">(</span>shouldScroll<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>isObject <span class="token operator">&amp;&amp;</span> <span class="token function">isValidPosition</span><span class="token punctuation">(</span>shouldScroll<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    position <span class="token operator">=</span> <span class="token function">normalizePosition</span><span class="token punctuation">(</span>shouldScroll<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>position<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// $flow-disable-line</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token string">'scrollBehavior'</span> <span class="token keyword">in</span> document<span class="token punctuation">.</span>documentElement<span class="token punctuation">.</span>style<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      window<span class="token punctuation">.</span><span class="token function">scrollTo</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+        <span class="token literal-property property">left</span><span class="token operator">:</span> position<span class="token punctuation">.</span>x<span class="token punctuation">,</span>
+        <span class="token literal-property property">top</span><span class="token operator">:</span> position<span class="token punctuation">.</span>y<span class="token punctuation">,</span>
+        <span class="token comment">// $flow-disable-line</span>
+        <span class="token literal-property property">behavior</span><span class="token operator">:</span> shouldScroll<span class="token punctuation">.</span>behavior
+      <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+      window<span class="token punctuation">.</span><span class="token function">scrollTo</span><span class="token punctuation">(</span>position<span class="token punctuation">.</span>x<span class="token punctuation">,</span> position<span class="token punctuation">.</span>y<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>这个方法有点复杂，首先要确定<code>shouldScroll</code>是个对象，然后判断有没有<code>selector</code>，如果有就获取这个<code>dom</code>。接下来要是取到<code>dom</code>就去获取<code>shouldScroll.offset</code>，如果没有设置就初始化为空对象。<br>
+接下来就对<code>offset</code>做一个标准化，确保它们是能用的</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token function">normalizeOffset</span> <span class="token punctuation">(</span><span class="token parameter"><span class="token literal-property property">obj</span><span class="token operator">:</span> Object</span><span class="token punctuation">)</span><span class="token operator">:</span> Object <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">x</span><span class="token operator">:</span> <span class="token function">isNumber</span><span class="token punctuation">(</span>obj<span class="token punctuation">.</span>x<span class="token punctuation">)</span> <span class="token operator">?</span> obj<span class="token punctuation">.</span>x <span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">y</span><span class="token operator">:</span> <span class="token function">isNumber</span><span class="token punctuation">(</span>obj<span class="token punctuation">.</span>y<span class="token punctuation">)</span> <span class="token operator">?</span> obj<span class="token punctuation">.</span>y <span class="token operator">:</span> <span class="token number">0</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>然后去计算一个滚动位置</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token function">getElementPosition</span> <span class="token punctuation">(</span><span class="token parameter"><span class="token literal-property property">el</span><span class="token operator">:</span> Element<span class="token punctuation">,</span> <span class="token literal-property property">offset</span><span class="token operator">:</span> Object</span><span class="token punctuation">)</span><span class="token operator">:</span> Object <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> <span class="token literal-property property">docEl</span><span class="token operator">:</span> any <span class="token operator">=</span> document<span class="token punctuation">.</span>documentElement
+  <span class="token keyword">const</span> docRect <span class="token operator">=</span> docEl<span class="token punctuation">.</span><span class="token function">getBoundingClientRect</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token keyword">const</span> elRect <span class="token operator">=</span> el<span class="token punctuation">.</span><span class="token function">getBoundingClientRect</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token keyword">return</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">x</span><span class="token operator">:</span> elRect<span class="token punctuation">.</span>left <span class="token operator">-</span> docRect<span class="token punctuation">.</span>left <span class="token operator">-</span> offset<span class="token punctuation">.</span>x<span class="token punctuation">,</span>
+    <span class="token literal-property property">y</span><span class="token operator">:</span> elRect<span class="token punctuation">.</span>top <span class="token operator">-</span> docRect<span class="token punctuation">.</span>top <span class="token operator">-</span> offset<span class="token punctuation">.</span>y
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>因为开始<code>left top</code>都是0，往下滚动往右滚动会变为负值，所以都是减去它们的值。如果<code>el</code>不存在再去检查<code>shouldScroll</code>是不是有效的</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token function">isValidPosition</span> <span class="token punctuation">(</span><span class="token parameter"><span class="token literal-property property">obj</span><span class="token operator">:</span> Object</span><span class="token punctuation">)</span><span class="token operator">:</span> boolean <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token function">isNumber</span><span class="token punctuation">(</span>obj<span class="token punctuation">.</span>x<span class="token punctuation">)</span> <span class="token operator">||</span> <span class="token function">isNumber</span><span class="token punctuation">(</span>obj<span class="token punctuation">.</span>y<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>只要x，y有一个存在就认为有效，另一个只要经过标准化就能保证它是数字了，所以接下来就标准化<code>shouldScroll</code>保存在<code>position</code>中。<br>
+接下来就是<code>shouldScroll.selector</code>不存在的逻辑了，其实不是<code>string</code>也可以认为它不存在，这里就没必要较真了。其实和上面逻辑是一样的，都是直接返回标准化的<code>shouldScroll</code>。<br>
+最后如果<code>position</code>存在，这里可能是前面执行后的<code>position</code>，也可能是前面都没有执行，用户定义的<code>behavior</code>压根没有返回内容时，<code>position</code>可能就是保存的位置信息，然后就是调用<code>window.scrollTo</code>设置滚动了。<br>
+定义滚动行为后</p> <div class="language-js extra-class"><pre class="language-js"><code>  <span class="token function">setupListeners</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>listeners<span class="token punctuation">.</span>length <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">const</span> router <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>router
+    <span class="token keyword">const</span> expectScroll <span class="token operator">=</span> router<span class="token punctuation">.</span>options<span class="token punctuation">.</span>scrollBehavior
+    <span class="token keyword">const</span> supportsScroll <span class="token operator">=</span> supportsPushState <span class="token operator">&amp;&amp;</span> expectScroll
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>supportsScroll<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>listeners<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token function">setupScroll</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+</code></pre></div><p><code>setupListeners</code> 有这样一段代码，定义滚动行为后会执行<code>setupScroll</code>方法</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">setupScroll</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// Prevent browser scroll behavior on History popstate</span>
+  <span class="token comment">// 防止浏览器在历史记录弹出状态下滚动</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token string">'scrollRestoration'</span> <span class="token keyword">in</span> window<span class="token punctuation">.</span>history<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    window<span class="token punctuation">.</span>history<span class="token punctuation">.</span>scrollRestoration <span class="token operator">=</span> <span class="token string">'manual'</span>
+  <span class="token punctuation">}</span>
+  <span class="token comment">// Fix for #1585 for Firefox</span>
+  <span class="token comment">// Fix for #2195 Add optional third attribute to workaround a bug in safari https://bugs.webkit.org/show_bug.cgi?id=182678</span>
+  <span class="token comment">// Fix for #2774 Support for apps loaded from Windows file shares not mapped to network drives: replaced location.origin with</span>
+  <span class="token comment">// window.location.protocol + '//' + window.location.host</span>
+  <span class="token comment">// location.host contains the port and location.hostname doesn't</span>
+  <span class="token keyword">const</span> protocolAndPath <span class="token operator">=</span> window<span class="token punctuation">.</span>location<span class="token punctuation">.</span>protocol <span class="token operator">+</span> <span class="token string">'//'</span> <span class="token operator">+</span> window<span class="token punctuation">.</span>location<span class="token punctuation">.</span>host
+  <span class="token keyword">const</span> absolutePath <span class="token operator">=</span> window<span class="token punctuation">.</span>location<span class="token punctuation">.</span>href<span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span>protocolAndPath<span class="token punctuation">,</span> <span class="token string">''</span><span class="token punctuation">)</span>
+  <span class="token comment">// preserve existing history state as it could be overriden by the user</span>
+  <span class="token keyword">const</span> stateCopy <span class="token operator">=</span> <span class="token function">extend</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span> window<span class="token punctuation">.</span>history<span class="token punctuation">.</span>state<span class="token punctuation">)</span>
+  stateCopy<span class="token punctuation">.</span>key <span class="token operator">=</span> <span class="token function">getStateKey</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  window<span class="token punctuation">.</span>history<span class="token punctuation">.</span><span class="token function">replaceState</span><span class="token punctuation">(</span>stateCopy<span class="token punctuation">,</span> <span class="token string">''</span><span class="token punctuation">,</span> absolutePath<span class="token punctuation">)</span>
+  window<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'popstate'</span><span class="token punctuation">,</span> handlePopState<span class="token punctuation">)</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    window<span class="token punctuation">.</span><span class="token function">removeEventListener</span><span class="token punctuation">(</span><span class="token string">'popstate'</span><span class="token punctuation">,</span> handlePopState<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>这里监听<code>popstate</code>方法会调用<code>handlePopState</code></p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token function">handlePopState</span> <span class="token punctuation">(</span><span class="token parameter">e</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token function">saveScrollPosition</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>e<span class="token punctuation">.</span>state <span class="token operator">&amp;&amp;</span> e<span class="token punctuation">.</span>state<span class="token punctuation">.</span>key<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">setStateKey</span><span class="token punctuation">(</span>e<span class="token punctuation">.</span>state<span class="token punctuation">.</span>key<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>这个方法主要是去重新设置滚动位置，离开本页面时先记录一次位置，然后调用<code>setStateKey</code>方法设置<code>key</code>为新页面<code>key</code>值，这样去获取滚动位置时候就能通过新的key值去找到新页面的滚动位置，从而保证点击浏览器前进回退时实现原生的效果。</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/./appendix/patch.html" class="prev">
+        patch
+      </a></span> <span class="next"><a href="/./appendix/compile.html">
+        compile
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="./assets/js/app.d5acc79b.js" defer></script><script src="./assets/js/2.b590321b.js" defer></script><script src="./assets/js/17.f8249aae.js" defer></script>
+  </body>
+</html>
